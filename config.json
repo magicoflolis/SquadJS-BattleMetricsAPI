@@ -1,0 +1,18 @@
+{
+  "connectors": {
+    "BattleMetrics": {
+      "BanLists": [
+        {
+          "name": "Ban List Name",
+          "listID": "Ban List ID",
+          "UUID": "Ban List UUID"
+        }
+      ],
+      "listID": "Ban List ID",
+      "orgID": "Org ID",
+      "serverID": "Server ID",
+      "token": "BattleMetrics Token",
+      "UUID": "BM"
+    }
+  }
+}

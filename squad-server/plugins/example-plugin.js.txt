@@ -1,0 +1,45 @@
+import BasePlugin from './base-plugin.js';
+
+class MyPlugin extends BasePlugin {
+  constructor(server, options, connectors) {
+    super(server, options, connectors);
+    this.onTeamKill = this.onTeamKill.bind(this); // Do this when you need to call your function through `this.server`
+    /**
+     * @type { import("../utils/battlemetrics-api").BattleMetrics }
+     */
+    this.bmClient = this.options.bmClient; // Simple alias
+  }
+
+  async mount() {
+    this.server.on('TEAMKILL', this.onTeamKill);
+  }
+
+  async onTeamKill(info) {
+    // Do nothing if the player kills themself
+    if (!info.attacker) {
+      return;
+    }
+    const { attacker, victim, weapon } = info;
+    const data = attacker;
+    // Add a note to the ban
+    data.note = `${attacker.name} teamkilled ${victim.name} w/ ${weapon}`;
+    // null is permanent, "1d" is 1 day, "2d" is 2 days, etc.
+    const myBan = await this.bmClient.addToBanList(
+      data,
+      'Teamkilling',
+      '1d',
+      '{{reason}} {{timeLeft}}',
+      'MyTeamKillBanList'
+    );
+    // We can even update the ban, you will need the ban id from created ban.
+    data.BAN_ID = myBan.id;
+    await this.bmClient.addToBanList(
+      data,
+      'Teamkilling and Disconnect',
+      null,
+      '{{reason}}',
+      'MyTeamKillBanList'
+    );
+  }
+}
+export default MyPlugin;
