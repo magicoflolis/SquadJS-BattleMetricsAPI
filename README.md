@@ -100,7 +100,7 @@ Anything with `?` at the end means it is **optional** and can be removed from th
 - In your SquadJS instance, replace `/squad-server/factory.js` with the one from this repo.
   - _If you have modified your `factory.js`, then manually add and import this connector._
 - From this repo add `/squad-server/utils/battlemetrics-api.js` and `/squad-server/utils/battlemetrics-api.d.ts` to your `/squad-server/utils` directory.
-  - `battlemetrics-api.d.ts` is used if you are going to create plugins or wanna know what each function does. Otherwise you can safetly ignore adding this file.
+  - `battlemetrics-api.d.ts` is used if you are going to create plugins or wanna know what each function does. Otherwise you can safely ignore adding this file.
 
 ## Plugins
 
