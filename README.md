@@ -3,7 +3,7 @@
 [![GitHub License](https://img.shields.io/github/license/magicoflolis/SquadJS-BattleMetricsAPI?style=flat-square)](https://github.com/magicoflolis/SquadJS-BattleMetricsAPI/blob/main/LICENSE)
 [![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/magicoflolis/SquadJS-BattleMetricsAPI?style=flat-square)](https://github.com/magicoflolis/SquadJS-BattleMetricsAPI/issues)
 
-Connect your SquadJS instance to BattleMetrics using the [BattleMetrics API](https://www.battlemetrics.com/developers/documentation). For any issues, see [issue tracker](https://github.com/magicoflolis/SquadJS-Knife-Broadcast/issues).
+Connect your SquadJS instance to BattleMetrics using the [BattleMetrics API](https://www.battlemetrics.com/developers/documentation). For any issues, see [issue tracker](https://github.com/magicoflolis/SquadJS-BattleMetricsAPI/issues).
 
 **Default `config.json`:**
 
