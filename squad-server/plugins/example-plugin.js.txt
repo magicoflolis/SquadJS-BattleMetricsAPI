@@ -15,7 +15,7 @@ class MyPlugin extends BasePlugin {
   }
 
   async onTeamKill(info) {
-    // Do nothing if the player kills themself
+    // Do nothing if the player kills themselves
     if (!info.attacker) {
       return;
     }

@@ -225,7 +225,7 @@ class BattleMetrics {
    * }
    * async mount() { this.server.on("TEAMKILL", this.onTeamKill); }
    * async onTeamKill(info) {
-   * // Do nothing if the player kills themself
+   * // Do nothing if the player kills themselves
    * if (!info.attacker) { return; }
    * const { attacker, victim, weapon } = info;
    * const data = attacker;
@@ -294,7 +294,7 @@ class BattleMetrics {
   /**
    * Type is not 100% accurate but it is the best I can do for now.
    */
-  prettyPrint<Content extends string>(content: Content): `[Date][BattleMetrics][${Content}][1]`;
+  prettyPrint<Content extends string>(content: Content): `[BattleMetrics][${Content}][1]`;
   // #endregion
 }
 

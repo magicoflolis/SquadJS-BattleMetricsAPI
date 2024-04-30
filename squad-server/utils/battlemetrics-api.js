@@ -761,7 +761,7 @@ class BattleMetrics {
    */
   prettyPrint(content) {
     const n = chalk.magentaBright(this.constructor.name);
-    return `[${new Date().toISOString()}][${n}]${content ? `[${content}]` : ''}[1]`;
+    return `[${n}]${content ? `[${content}]` : ''}[1]`;
   }
   // #endregion
 }
